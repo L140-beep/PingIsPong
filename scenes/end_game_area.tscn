@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwogofkspp4oc"]
+
+[ext_resource type="Script" path="res://scenes/end_game_area.gd" id="1_5wbx5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mc3ia"]
+size = Vector2(82, 658)
+
+[node name="EndGameArea" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_5wbx5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(31, 319)
+shape = SubResource("RectangleShape2D_mc3ia")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

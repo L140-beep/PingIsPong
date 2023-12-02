@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc8xpjanpfvt7"]
+
+[ext_resource type="PackedScene" uid="uid://df2kgejm7rsht" path="res://scenes/ball.tscn" id="1_ydb5w"]
+
+[node name="AIBall" instance=ExtResource("1_ydb5w")]
+visible = false
+collision_layer = 16
+collision_mask = 32
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(0.500001, 1)
+scale = Vector2(1.65, 1.8)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,96 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl8o0ww68pdnc"]
+
+[ext_resource type="Texture2D" uid="uid://cacmtyctqhgy2" path="res://assets/backgrounds/bg-game.png" id="1_ajrfs"]
+[ext_resource type="Script" path="res://scenes/ui/game_ui.gd" id="1_pvoim"]
+[ext_resource type="FontFile" uid="uid://iv10e40cn2ix" path="res://assets/fonts/Molot/Molot.otf" id="3_kxbo2"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pvoim")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ajrfs")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.729412, 0.854902, 0.52549, 1)
+theme_override_fonts/font = ExtResource("3_kxbo2")
+text = "Score"
+uppercase = true
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ScoreL" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.729412, 0.854902, 0.52549, 1)
+theme_override_fonts/font = ExtResource("3_kxbo2")
+text = "0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+alignment = 2
+
+[node name="ScoreR" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.729412, 0.854902, 0.52549, 1)
+theme_override_fonts/font = ExtResource("3_kxbo2")
+text = "0"
+
+[node name="InfoLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.729412, 0.854902, 0.52549, 1)
+theme_override_fonts/font = ExtResource("3_kxbo2")
+horizontal_alignment = 1
+vertical_alignment = 1

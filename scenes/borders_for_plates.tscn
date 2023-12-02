@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtsymmp0v4rko"]
+
+[ext_resource type="Script" path="res://scenes/borders_for_plates.gd" id="1_i7ajd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kaq2f"]
+size = Vector2(1162, 74)
+
+[node name="BordersForPlates" type="StaticBody2D"]
+position = Vector2(8, 8)
+collision_layer = 2
+script = ExtResource("1_i7ajd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(571, 27)
+shape = SubResource("RectangleShape2D_kaq2f")
