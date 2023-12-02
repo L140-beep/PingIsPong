@@ -76,9 +76,8 @@ func _physics_process(delta):
 					velocity.y = move_toward(velocity.y, 0, delta * FRICTION)
 				move_and_slide()
 		else:
-			print(goal)
 			var direction = goal- global_position.y
-			if abs(global_position.y - goal) > 20:
+			if abs(global_position.y - goal) > 10:
 				velocity.y = move_toward(velocity.y, direction * SPEED, delta * ACCELERATION)
 			else:
 				velocity.y = move_toward(velocity.y, 0, delta * FRICTION)

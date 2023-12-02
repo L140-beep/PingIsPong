@@ -6,6 +6,8 @@
 visible = false
 collision_layer = 16
 collision_mask = 32
+SPEED = Vector2(400, 400)
+ROTATION_SPEED = 0.01
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." index="2"]
 position = Vector2(0.500001, 1)

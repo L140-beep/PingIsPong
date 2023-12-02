@@ -23,9 +23,13 @@ func _physics_process(delta):
 	if not stopped:	
 		if collide:
 			var direction = collide.get_normal()
-			direction.y *= 0.01
+			var norm_vec = velocity.normalized()
+			#var _cos = ((direction.x * norm_vec.x) + (direction.y * norm_vec.y)) / (sqrt(direction.x ** 2 + direction.y ** 2) * sqrt(norm_vec.x ** 2 + norm_vec.y ** 2))
+			#rad_to_deg(1 / _cos)
+			
+			#direction.y *= 0.01
 			direction = direction.normalized()
-			velocity = velocity.bounce(direction)
+			velocity = (-(5 * direction * velocity.dot(direction) - (velocity * 3))).normalized() * MAX_SPEED
 			velocity *= 1.4
 			
 	velocity = velocity.limit_length(MAX_SPEED)

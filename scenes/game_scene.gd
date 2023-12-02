@@ -78,7 +78,6 @@ func _on_end_game_area_llose():
 	check_win(int(lscore), int(rscore) + 1)
 
 func _on_ai_detect_area_body_entered(body: Ball):
-	print('here')
 	var ai_ball: Ball = AIBallScene.instantiate()
 	ai_ball.global_position = body.global_position
 	ai_ball.velocity = body.velocity * HARDMODE

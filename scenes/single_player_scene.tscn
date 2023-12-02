@@ -51,7 +51,6 @@ collision_mask = 16
 position = Vector2(8, 336)
 shape = SubResource("RectangleShape2D_kmb53")
 
-[connection signal="pressed" from="PauseMenu/ColorRect/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer/Quit" to="PlateLayer/RPlate" method="_on_quit_pressed" flags=18]
 [connection signal="body_entered" from="AIDetectArea" to="." method="_on_ai_detect_area_body_entered"]
 [connection signal="body_entered" from="AIDetectArea2" to="." method="_on_ai_detect_area_body_entered"]
 [connection signal="body_entered" from="AIDetectArea2" to="." method="_on_ai_detect_area_2_body_entered"]
