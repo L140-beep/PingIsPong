@@ -50,7 +50,6 @@ theme_override_constants/margin_right = 20
 layout_mode = 2
 theme_override_colors/font_color = Color(0.729412, 0.854902, 0.52549, 1)
 theme_override_fonts/font = ExtResource("3_kxbo2")
-text = "Score"
 uppercase = true
 
 [node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
@@ -71,20 +70,23 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0.729412, 0.854902, 0.52549, 1)
 theme_override_fonts/font = ExtResource("3_kxbo2")
+theme_override_font_sizes/font_size = 72
 text = "0"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-alignment = 2
+theme_override_colors/font_color = Color(0.729412, 0.854902, 0.52549, 1)
+theme_override_fonts/font = ExtResource("3_kxbo2")
+theme_override_font_sizes/font_size = 50
+text = ":"
 
-[node name="ScoreR" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+[node name="ScoreR" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0.729412, 0.854902, 0.52549, 1)
 theme_override_fonts/font = ExtResource("3_kxbo2")
+theme_override_font_sizes/font_size = 72
 text = "0"
 
 [node name="InfoLabel" type="Label" parent="MarginContainer/VBoxContainer"]

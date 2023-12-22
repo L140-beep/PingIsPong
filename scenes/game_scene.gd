@@ -2,6 +2,7 @@ extends Node2D
 
 var end = false
 
+
 @export var AIBallScene: PackedScene
 @export var MAX_SCORE = 5
 @onready var ball: Ball = $Ball
@@ -11,6 +12,8 @@ var end = false
 @onready var rpos: Marker2D = $RPlateStartPosition
 @onready var ball_pos: Marker2D  = $BallStartPosition
 @onready var ui: UserInterface = $CanvasLayer/UI
+@onready var win_scene = $win_scene as WinScreen
+
 const HARDMODE = 5
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -51,14 +54,17 @@ func stop():
 	lplate.visible = false
 	rplate.visible = false
 	end = true
+	win_scene.open()
 
 func check_win(lscore, rscore):
 	if lscore == MAX_SCORE:
 		ui.set_info("LEFT WIN")
 		stop()
+		win_scene.set_score(lscore, rscore)
 		return
 	elif rscore == MAX_SCORE:
 		ui.set_info("RIGHT WIN")
+		win_scene.set_score(lscore, rscore)
 		stop()
 	else:
 		start()
@@ -96,3 +102,11 @@ func _on_ai_detect_area_2_body_entered(body):
 	ai_ball.velocity = body.velocity * HARDMODE * 2
 	ai_ball.MAX_SPEED = ai_ball.MAX_SPEED * HARDMODE * 2
 	add_child(ai_ball)
+
+func _on_win_scene_restart():
+	restart()
+	win_scene.close()
+func _on_win_scene_home():
+	get_tree().change_scene_to_file("res://scenes/ui/menus/MainMenu.tscn")
+	
+

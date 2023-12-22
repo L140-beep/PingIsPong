@@ -13,7 +13,13 @@ size = Vector2(88, 672)
 [node name="SinglePlayerScene" instance=ExtResource("1_uitmh")]
 AIBallScene = ExtResource("2_hegav")
 
-[node name="RPlate" parent="PlateLayer" index="0"]
+[node name="LPlate" parent="PlateLayer" index="0"]
+z_index = 2
+position = Vector2(104, 320)
+
+[node name="RPlate" parent="PlateLayer" index="1"]
+z_index = 1
+position = Vector2(1032, 328)
 ai = true
 
 [node name="BordersForBall" parent="." index="9"]
@@ -23,6 +29,9 @@ collision_mask = 20
 [node name="BordersForBall2" parent="." index="10"]
 collision_layer = 40
 collision_mask = 20
+
+[node name="PauseMenu" parent="." index="13"]
+process_mode = 1
 
 [node name="AIDetectArea" parent="." index="14" instance=ExtResource("3_f5khc")]
 position = Vector2(608, 1)
@@ -42,21 +51,34 @@ collision_mask = 4
 position = Vector2(-336, 343)
 shape = SubResource("RectangleShape2D_udvg7")
 
-[node name="AiGoalArea" type="Area2D" parent="." index="16"]
+[node name="AIDetectArea4" parent="." index="16" instance=ExtResource("3_f5khc")]
+position = Vector2(608, 1)
+collision_layer = 16
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="AIDetectArea4" index="0"]
+position = Vector2(-176, 334)
+shape = SubResource("RectangleShape2D_udvg7")
+
+[node name="AiGoalArea" type="Area2D" parent="." index="17"]
 position = Vector2(984, 0)
 collision_layer = 32
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AiGoalArea" index="0"]
-position = Vector2(8, 336)
+position = Vector2(56, 324)
 shape = SubResource("RectangleShape2D_kmb53")
 
+[connection signal="pressed" from="PauseMenu/ColorRect/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer/Quit" to="PlateLayer/RPlate" method="_on_quit_pressed" flags=18]
 [connection signal="body_entered" from="AIDetectArea" to="." method="_on_ai_detect_area_body_entered"]
 [connection signal="body_entered" from="AIDetectArea2" to="." method="_on_ai_detect_area_body_entered"]
 [connection signal="body_entered" from="AIDetectArea2" to="." method="_on_ai_detect_area_2_body_entered"]
+[connection signal="body_entered" from="AIDetectArea4" to="." method="_on_ai_detect_area_body_entered"]
+[connection signal="body_entered" from="AIDetectArea4" to="." method="_on_ai_detect_area_2_body_entered"]
 [connection signal="body_entered" from="AiGoalArea" to="." method="_on_ai_goal_area_body_entered"]
 [connection signal="body_exited" from="AiGoalArea" to="." method="_on_ai_goal_area_body_exited"]
 
 [editable path="PauseMenu"]
 [editable path="AIDetectArea"]
 [editable path="AIDetectArea2"]
+[editable path="AIDetectArea4"]

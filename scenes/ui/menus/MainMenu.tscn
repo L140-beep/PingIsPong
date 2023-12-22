@@ -1,16 +1,160 @@
-[gd_scene load_steps=18 format=3 uid="uid://w7k4nsi58t2j"]
+[gd_scene load_steps=53 format=3 uid="uid://w7k4nsi58t2j"]
 
 [ext_resource type="Texture2D" uid="uid://csfju8sgfthal" path="res://assets/backgrounds/bg-menu.png" id="1_s3qyk"]
 [ext_resource type="Script" path="res://scenes/ui/menus/MainMenu.gd" id="1_ut8us"]
+[ext_resource type="Texture2D" uid="uid://dsqq2jcaj0xy" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0014.png" id="2_1l2ob"]
 [ext_resource type="Texture2D" uid="uid://y22p4lpy6hk" path="res://assets/левая.png" id="2_7hp64"]
+[ext_resource type="Texture2D" uid="uid://dlcnew3j0jj32" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0015.png" id="3_e65j2"]
 [ext_resource type="Texture2D" uid="uid://bewd2r7lhides" path="res://assets/лого.png" id="3_uatbr"]
 [ext_resource type="Texture2D" uid="uid://nrb51rxfh0r4" path="res://assets/правая.png" id="3_xsn34"]
+[ext_resource type="Texture2D" uid="uid://2bmh1j2ujr44" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0016.png" id="4_2qvxo"]
 [ext_resource type="Texture2D" uid="uid://b5uqqutq5401k" path="res://assets/старт2.png" id="4_o2os0"]
+[ext_resource type="Texture2D" uid="uid://c083sp3mskt1c" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0017.png" id="5_273my"]
 [ext_resource type="Texture2D" uid="uid://cef0yfpkstq6n" path="res://assets/выход2.png" id="5_dyomr"]
 [ext_resource type="Texture2D" uid="uid://bq20udhdpyw3g" path="res://assets/on-click_старт.png" id="5_xfdbg"]
+[ext_resource type="Texture2D" uid="uid://dcfyv7ypltved" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0018.png" id="6_put4x"]
 [ext_resource type="Texture2D" uid="uid://bf2d4nford1bh" path="res://assets/on-click-выход.png" id="6_qcluo"]
 [ext_resource type="Texture2D" uid="uid://bt78imeh7qp1k" path="res://assets/hover-старт.png" id="6_qdwy1"]
+[ext_resource type="Texture2D" uid="uid://b0fjus8bkfh6p" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0019.png" id="7_26qmo"]
 [ext_resource type="Texture2D" uid="uid://bpeyegphpftnl" path="res://assets/ховер_выход.png" id="7_pvpfk"]
+[ext_resource type="Texture2D" uid="uid://05pjqw2034mp" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0020.png" id="8_akbe5"]
+[ext_resource type="Texture2D" uid="uid://c7qgplxfbasc0" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0021.png" id="9_yrni2"]
+[ext_resource type="Texture2D" uid="uid://k3wnjxoomxy6" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0022.png" id="10_rbktd"]
+[ext_resource type="Texture2D" uid="uid://ddiejfoxc46nm" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0023.png" id="11_htw7s"]
+[ext_resource type="Texture2D" uid="uid://d4cnyqmi81af7" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0024.png" id="12_jupju"]
+[ext_resource type="Texture2D" uid="uid://blgappkn6ul8g" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0025.png" id="13_d6oik"]
+[ext_resource type="Texture2D" uid="uid://b4vwj6g1iky6a" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0026.png" id="14_csrbr"]
+[ext_resource type="Texture2D" uid="uid://bp2jgd5m2u3f8" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0027.png" id="15_0u1ql"]
+[ext_resource type="Texture2D" uid="uid://676v01kjjfjd" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0028.png" id="16_j81cv"]
+[ext_resource type="Texture2D" uid="uid://dqsc1puj6opwl" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0029.png" id="17_8met6"]
+[ext_resource type="Texture2D" uid="uid://c3rmgft5q1p1x" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0030.png" id="18_7xfeh"]
+[ext_resource type="Texture2D" uid="uid://cek55lgjekkvd" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0031.png" id="19_tvi27"]
+[ext_resource type="Texture2D" uid="uid://bjjgbts7cde2s" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0032.png" id="20_n4t00"]
+[ext_resource type="Texture2D" uid="uid://ee416jyfcnpt" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0033.png" id="21_h5weo"]
+[ext_resource type="Texture2D" uid="uid://du8y0omfjgiuc" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0034.png" id="22_6twsv"]
+[ext_resource type="Texture2D" uid="uid://77ns6jc14ufe" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0035.png" id="23_ak74m"]
+[ext_resource type="Texture2D" uid="uid://c8bm60w8bqqmw" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0036.png" id="24_mnnkb"]
+[ext_resource type="Texture2D" uid="uid://cgfutl6f1lxb5" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0037.png" id="25_ahgrs"]
+[ext_resource type="Texture2D" uid="uid://cw240wnq40vgb" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0038.png" id="26_men7e"]
+[ext_resource type="Texture2D" uid="uid://bd6hosxcemt3w" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0039.png" id="27_iy6ct"]
+[ext_resource type="Texture2D" uid="uid://cuswxu80l3esa" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0040.png" id="28_7kg1l"]
+[ext_resource type="Texture2D" uid="uid://wdrb4ws48817" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0041.png" id="29_tqfyv"]
+[ext_resource type="Texture2D" uid="uid://cbp2h51edj246" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0042.png" id="30_30bo2"]
+[ext_resource type="Texture2D" uid="uid://r06dxol1ufws" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0043.png" id="31_ktyd4"]
+[ext_resource type="Texture2D" uid="uid://00pyq08ld34u" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0044.png" id="32_w64ul"]
+[ext_resource type="Texture2D" uid="uid://di3cngl5o6htn" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0045.png" id="33_hf3sr"]
+[ext_resource type="Texture2D" uid="uid://dhhqhgtocpvo3" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0046.png" id="34_kb2nx"]
+[ext_resource type="Texture2D" uid="uid://dn53qawo4spm8" path="res://assets/Пыль/пыль/RECOVER_ворота и пыль0047.png" id="35_twj2b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gsjut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1l2ob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e65j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2qvxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_273my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_put4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_26qmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_akbe5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yrni2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rbktd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_htw7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jupju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_d6oik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_csrbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0u1ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_j81cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8met6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7xfeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_tvi27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_n4t00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_h5weo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6twsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ak74m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_mnnkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ahgrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_men7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_iy6ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_7kg1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_tqfyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_30bo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ktyd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_w64ul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_hf3sr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_kb2nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_twj2b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
 
 [sub_resource type="Animation" id="Animation_q267s"]
 resource_name = "DoorsOpen"
@@ -25,7 +169,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-36, -3), Vector2(-616, 0)]
+"values": [Vector2(-24, 0), Vector2(-616, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -37,38 +181,38 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(568, -3), Vector2(1160, -4.76837e-07)]
+"values": [Vector2(576, 0), Vector2(1160, 0)]
 }
-
-[sub_resource type="Animation" id="Animation_ixd1e"]
-resource_name = "Light"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/CanvasModulate:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/CanvasModulate:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0.0117647, 0.0117647, 0.0117647, 1), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_ixd1e"]
+resource_name = "Light"
+length = 2.0
+
 [sub_resource type="Animation" id="Animation_4lpag"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/CanvasModulate:color")
+tracks/0/path = NodePath("LeftDoor:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.0117647, 0.0117647, 0.0117647, 1)]
+"values": [Vector2(-616, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -80,19 +224,19 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1160, -4.76837e-07)]
+"values": [Vector2(1160, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("LeftDoor:position")
+tracks/2/path = NodePath("CanvasLayer/CanvasModulate:color")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-616, 0)]
+"values": [Color(0.0117647, 0.0117647, 0.0117647, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pgmyg"]
@@ -105,18 +249,6 @@ _data = {
 [sub_resource type="Animation" id="Animation_y7wnb"]
 resource_name = "Light"
 length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/CanvasModulate:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.0117647, 0.0117647, 0.0117647, 1), Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_34u6o"]
 _data = {
@@ -148,6 +280,10 @@ offset_bottom = 659.0
 scale = Vector2(0.641673, 0.986429)
 texture = ExtResource("3_xsn34")
 expand_mode = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, -8)
+sprite_frames = SubResource("SpriteFrames_gsjut")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -197,13 +333,6 @@ texture_normal = ExtResource("4_o2os0")
 texture_pressed = ExtResource("5_xfdbg")
 texture_hover = ExtResource("6_qdwy1")
 
-[node name="SinglePlayer" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer"]
-self_modulate = Color(0.72549, 1, 1, 1)
-layout_mode = 2
-texture_normal = ExtResource("4_o2os0")
-texture_pressed = ExtResource("5_xfdbg")
-texture_hover = ExtResource("6_qdwy1")
-
 [node name="Quit" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer"]
 layout_mode = 2
 texture_normal = ExtResource("5_dyomr")
@@ -224,8 +353,7 @@ libraries = {
 "": SubResource("AnimationLibrary_34u6o")
 }
 
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer/SinglePlayer" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer/SinglePlayer" to="." method="_on_single_player_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

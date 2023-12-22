@@ -29,10 +29,8 @@ func _physics_process(delta):
 			
 			#direction.y *= 0.01
 			direction = direction.normalized()
-			velocity = (-(5 * direction * velocity.dot(direction) - (velocity * 3))).normalized() * MAX_SPEED
-			velocity *= 1.4
-			
-	velocity = velocity.limit_length(MAX_SPEED)
+			velocity = (-(7 * direction * velocity.dot(direction) - (velocity * 4))).normalized() * MAX_SPEED
+
 	if velocity.x < 0:
 		rotation -= deg_to_rad(velocity.x) * ROTATION_SPEED
 	else:

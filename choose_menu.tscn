@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://df4as8x2wqwlo"]
+
+[ext_resource type="Script" path="res://choose_menu.gd" id="1_i34vc"]
+[ext_resource type="Texture2D" uid="uid://csfju8sgfthal" path="res://assets/backgrounds/bg-menu.png" id="2_y7nsg"]
+[ext_resource type="Texture2D" uid="uid://cgsqrsjh6vr2p" path="res://assets/2 игрока.png" id="3_quc0y"]
+[ext_resource type="Texture2D" uid="uid://juqpxkei0hjm" path="res://assets/2 игрока click.png" id="4_i7rxe"]
+[ext_resource type="Texture2D" uid="uid://d3uiceojap1ds" path="res://assets/2 игрока hover.png" id="5_6hddg"]
+[ext_resource type="Texture2D" uid="uid://kq38vxilky4v" path="res://assets/1 игрок.png" id="6_afvtm"]
+[ext_resource type="Texture2D" uid="uid://dsngnshr7ns1o" path="res://assets/1 игрок click.png" id="7_8bibd"]
+[ext_resource type="Texture2D" uid="uid://dqaxma88io5in" path="res://assets/1 игрок hover.png" id="8_juj8p"]
+[ext_resource type="Texture2D" uid="uid://cef0yfpkstq6n" path="res://assets/выход2.png" id="9_ywen7"]
+[ext_resource type="Texture2D" uid="uid://bf2d4nford1bh" path="res://assets/on-click-выход.png" id="10_xaac0"]
+[ext_resource type="Texture2D" uid="uid://bpeyegphpftnl" path="res://assets/ховер_выход.png" id="11_35gjr"]
+
+[node name="choose_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i34vc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_y7nsg")
+expand_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_right = 60
+
+[node name="ButtonContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="SinglePlayer" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer"]
+custom_minimum_size = Vector2(372, 105)
+layout_mode = 2
+texture_normal = ExtResource("6_afvtm")
+texture_pressed = ExtResource("7_8bibd")
+texture_hover = ExtResource("8_juj8p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Start" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer"]
+custom_minimum_size = Vector2(372, 105)
+layout_mode = 2
+texture_normal = ExtResource("3_quc0y")
+texture_pressed = ExtResource("4_i7rxe")
+texture_hover = ExtResource("5_6hddg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Quit" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("9_ywen7")
+texture_pressed = ExtResource("10_xaac0")
+texture_hover = ExtResource("11_35gjr")
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer/SinglePlayer" to="." method="_on_start_pressed" flags=18]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer/SinglePlayer" to="." method="_on_single_player_pressed" flags=18]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer/Start" to="." method="_on_start_pressed" flags=18]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer2/ButtonContainer/Quit" to="." method="_on_quit_pressed" flags=18]

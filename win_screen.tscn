@@ -1,0 +1,204 @@
+[gd_scene load_steps=14 format=3 uid="uid://b7j037wh2wf3l"]
+
+[ext_resource type="Script" path="res://scenes/win_screen.gd" id="1_lx6gp"]
+[ext_resource type="Texture2D" uid="uid://ug35nuul1e37" path="res://assets/окно.png" id="1_y8rjd"]
+[ext_resource type="Texture2D" uid="uid://mr0222ycfjop" path="res://assets/рестарт.png" id="2_hhuiy"]
+[ext_resource type="Texture2D" uid="uid://clrq7fk35wohh" path="res://assets/дом.png" id="2_pfq01"]
+[ext_resource type="FontFile" uid="uid://iv10e40cn2ix" path="res://assets/fonts/Molot/Molot.otf" id="2_r80u1"]
+[ext_resource type="Texture2D" uid="uid://b4m2s5pe18awd" path="res://assets/click стрелка.png" id="4_stqne"]
+[ext_resource type="Texture2D" uid="uid://clw0rumbsxo44" path="res://assets/hover стрелка.png" id="5_ue4ua"]
+[ext_resource type="Texture2D" uid="uid://cydynjq0jfg84" path="res://assets/click дом.png" id="7_q6d3p"]
+[ext_resource type="Texture2D" uid="uid://cktcd8jq8f7bk" path="res://assets/hover дом.png" id="8_ugudx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dap8u"]
+
+[sub_resource type="Animation" id="Animation_kj10x"]
+resource_name = "close"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_j84h3"]
+resource_name = "open"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pooln"]
+_data = {
+"close": SubResource("Animation_kj10x"),
+"open": SubResource("Animation_j84h3")
+}
+
+[node name="win_screen" type="CanvasLayer"]
+script = ExtResource("1_lx6gp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_dap8u")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.317647, 0.647059, 0.172549, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+offset_left = 194.0
+offset_top = 74.0
+offset_right = 958.0
+offset_bottom = 574.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(383, 250)
+texture = ExtResource("1_y8rjd")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.5
+offset_top = -178.5
+offset_right = 163.5
+offset_bottom = 178.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 28
+
+[node name="Label" type="Label" parent="ColorRect/TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.317647, 0.356863, 0.207843, 1)
+theme_override_fonts/font = ExtResource("2_r80u1")
+theme_override_font_sizes/font_size = 84
+text = "ПоБЕДА!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -15
+
+[node name="Label2" type="Label" parent="ColorRect/TextureRect/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.945098, 0.878431, 0.788235, 1)
+theme_override_fonts/font = ExtResource("2_r80u1")
+theme_override_font_sizes/font_size = 32
+text = "СЧЁТ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ColorRect/TextureRect/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.235294, 0.266667, 0.14902, 1)
+theme_override_fonts/font = ExtResource("2_r80u1")
+theme_override_font_sizes/font_size = 62
+text = "0:0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Restart" type="TextureButton" parent="ColorRect/TextureRect/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_hhuiy")
+texture_pressed = ExtResource("4_stqne")
+texture_hover = ExtResource("5_ue4ua")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/TextureRect/VBoxContainer/HBoxContainer/Restart"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.84616
+offset_bottom = 3.84615
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hhuiy")
+expand_mode = 5
+
+[node name="Home" type="TextureButton" parent="ColorRect/TextureRect/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_pfq01")
+texture_pressed = ExtResource("7_q6d3p")
+texture_hover = ExtResource("8_ugudx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/TextureRect/VBoxContainer/HBoxContainer/Home"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pfq01")
+expand_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pooln")
+}
+
+[connection signal="pressed" from="ColorRect/TextureRect/VBoxContainer/HBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/VBoxContainer/HBoxContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

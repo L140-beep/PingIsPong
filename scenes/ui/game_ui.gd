@@ -2,7 +2,7 @@ class_name UserInterface
 extends Control
 
 @onready var lscore: Label = $MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ScoreL
-@onready var rscore: Label = $MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2/ScoreR
+@onready var rscore: Label = $MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/ScoreR
 @onready var info: Label = $MarginContainer/VBoxContainer/InfoLabel
 # Called when the node enters the scene tree for the first time.
 func _ready():
